@@ -11,6 +11,7 @@ module.exports = {
     "plugin:vue/vue3-essential",
     "eslint:recommended",
     "@vue/eslint-config-prettier",
+    "prettier",
   ],
   overrides: [
     {
@@ -21,4 +22,15 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
   },
+  rules: {
+    'prettier/prettier': [
+      // 'prettier/prettier' rule from 'eslint-plugin-prettier'
+      'error', // violation of the rule will cause an error
+      {
+        singleQuote: true, // option that sets single quotes as the valid quotes,
+        endOfLine: 'off'
+      },
+      
+    ]
+  }
 };
