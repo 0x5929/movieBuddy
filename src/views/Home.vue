@@ -150,9 +150,9 @@ const onSubmit = async () => {
         }
 
         .detail {
-          @apply px-4 py-2 grow shrink basis-full rounded-b-lg;
+          @apply px-4 py-2 grow shrink basis-full max-w-5xl rounded-b-lg;
           background-color: #496583;
-          width: 300px;
+          // width: 300px;
 
           .year {
             @apply text-gray-50 text-sm;
