@@ -1,33 +1,45 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, beforeEach, afterEach } from 'vitest'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import { mount } from '@vue/test-utils'
 import App from './App.vue'
-import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
+import HomeView from '../views/Home.vue'
 
 describe('App', () => {
-  it('renders properly with routing', async () => {
-    const router = createRouter({
-      history: createWebHistory(),
-      routes: [{
-        path: '/',
-        name: 'home',
-        component: HomeView
-      }, {
-        path: '/about',
-        name: 'about',
-        component: AboutView
-      }]
-    })
+  let setup
 
-    router.push('/')
+  beforeEach(async () => {
 
-    await router.isReady
-    const wrapper = mount(App, {global: {
-      plugins: [router]
-    }})
+    setup = async () => {
+      const router = createRouter({
+        history: createWebHistory(),
+        routes: [{
+          path: '/',
+          name: 'Home',
+          component: HomeView
+        }]
+      })
+      await router.isReady
+      const wrapper = mount(App, {global: {
+        plugins: [router]
+      }})
+  
+      router.push('/')
 
-    expect(wrapper.text()).toContain('movieBuddy')
+      return {
+        wrapper
+      }
+    }
+  })
+
+
+  it('renders header components properly', async () => {
+    const { wrapper } = await setup()
+
+    expect(wrapper.text()).toContain('MovieBuddy')
+  })
+
+  afterEach(() => {
+    setup = null
   })
 })
