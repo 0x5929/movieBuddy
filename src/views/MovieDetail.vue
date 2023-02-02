@@ -14,11 +14,10 @@ onBeforeMount(async () => {
 
   const data = await resp.json()
   movie.value = data
-  console.log('movie.value: ', movie.value)
 })
 </script>
 <template>
-  <div class="movie-detail">
+  <div class="movie-detail" v-if="Object.keys(movie).length > 0">
     <h2>{{ movie.Title }}</h2>
     <p class="year">{{ movie.Year }}</p>
     <img :src="movie.Poster" alt="Movie Poster" class="featured-image" />
