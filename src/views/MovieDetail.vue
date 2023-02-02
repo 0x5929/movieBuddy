@@ -7,7 +7,7 @@ const route = useRoute()
 
 onBeforeMount(async () => {
   const resp = await fetch(
-    `http://www.omdbapi.com/?apikey=${import.meta.env.VITE_ODB_APIKEY}&i=${
+    `https://www.omdbapi.com/?apikey=${import.meta.env.VITE_ODB_APIKEY}&i=${
       route.params.id
     }&plot=full`
   )

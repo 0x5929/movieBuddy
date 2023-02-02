@@ -9,7 +9,7 @@ const onSubmit = async () => {
   // we can do additional validation here
   if (search.value !== '') {
     const resp = await fetch(
-      `http://www.omdbapi.com/?apikey=${import.meta.env.VITE_ODB_APIKEY}&s=${
+      `https://www.omdbapi.com/?apikey=${import.meta.env.VITE_ODB_APIKEY}&s=${
         search.value
       }`
     )
