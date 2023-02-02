@@ -51,14 +51,14 @@ $ yarn test:e2e
 
 ### TODOs
 1. further testing
-  - mock `vue-router` 
-  - mock `fetch`
-  - e2e testing with cypress
+    - mock `vue-router` 
+    - mock `fetch`
+    - e2e testing with cypress
 2. features
-  - menu button in header (with modals for credits, terms and privacy info)
-  - light/dark mode switch (with working theme in tailwindcss)
-  - spinner for render while waiting for API response
+    - menu button in header (with modals for credits, terms and privacy info)
+    - light/dark mode switch (with working theme in tailwindcss)
+    - spinner for render while waiting for API response
 3. DX
-  - add support for module aliases 
+    - add support for module aliases 
 
 
