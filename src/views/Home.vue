@@ -34,10 +34,12 @@ const onSubmit = async () => {
           <div class="detail">
             <h3>Avengers: End Game</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              After the devastating events of Avengers: Infinity War (2018), the
+              universe is in ruins due to the efforts of the Mad Titan, Thanos.
+              With the help of remaining allies, the Avengers must assemble once
+              more in order to undo Thanos's actions and undo the chaos to the
+              universe, no matter what consequences may be in store, and no
+              matter who they face.
             </p>
           </div>
         </RouterLink>
