@@ -140,9 +140,8 @@ const onSubmit = async () => {
           @apply relative block;
 
           img {
-            @apply block w-full object-cover;
+            @apply block object-cover w-72;
             height: 275px;
-            width: 300px;
           }
 
           .type {
@@ -152,9 +151,8 @@ const onSubmit = async () => {
         }
 
         .detail {
-          @apply px-4 py-2 grow shrink basis-full max-w-5xl rounded-b-lg;
+          @apply px-4 py-2 rounded-b-lg w-auto sm:w-72;
           background-color: #496583;
-          // width: 300px;
 
           .year {
             @apply text-gray-50 text-sm;
