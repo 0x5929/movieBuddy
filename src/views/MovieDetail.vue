@@ -21,11 +21,7 @@ onBeforeMount(async () => {
     <h2>{{ movie.Title }}</h2>
     <p class="year">{{ movie.Year }}</p>
     <img :src="movie.Poster" alt="Movie Poster" class="featured-image" />
-    <span
-      class="ratings"
-      v-for="(rating, index) in movie.Ratings"
-      :key="rating.Source"
-    >
+    <span class="ratings" v-for="rating in movie.Ratings" :key="rating.Source">
       {{ `${rating.Source} : ${rating.Value}` }}
     </span>
     <span class="ratings">{{ 'IMDB : ' + movie.imdbRating }}</span>
