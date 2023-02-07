@@ -8,6 +8,10 @@ const movies = ref([])
 const onSubmit = async () => {
   // we can do additional validation here
   if (search.value !== '') {
+    console.log(
+      'import.meta.env.VITE_ODB_APIKEY: ',
+      import.meta.env.VITE_ODB_APIKEY
+    )
     const resp = await fetch(
       `https://www.omdbapi.com/?apikey=${import.meta.env.VITE_ODB_APIKEY}&s=${
         search.value
@@ -25,12 +29,12 @@ const onSubmit = async () => {
   <main>
     <div class="home">
       <div class="featured-card">
+        <img
+          src="https://oyster.ignimgs.com/wordpress/stg.ign.com/2019/03/D1pKLzbUYAAb0la.jpg-large.jpg"
+          alt="end game poster"
+          class="featured-img"
+        />
         <RouterLink to="/movie/tt4154796">
-          <img
-            src="https://oyster.ignimgs.com/wordpress/stg.ign.com/2019/03/D1pKLzbUYAAb0la.jpg-large.jpg"
-            alt="end game poster"
-            class="featured-img"
-          />
           <div class="detail">
             <h3>Avengers: End Game</h3>
             <p>
