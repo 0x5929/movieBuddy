@@ -8,10 +8,6 @@ const movies = ref([])
 const onSubmit = async () => {
   // we can do additional validation here
   if (search.value !== '') {
-    console.log(
-      'import.meta.env.VITE_ODB_APIKEY: ',
-      import.meta.env.VITE_ODB_APIKEY
-    )
     const resp = await fetch(
       `https://www.omdbapi.com/?apikey=${import.meta.env.VITE_ODB_APIKEY}&s=${
         search.value
