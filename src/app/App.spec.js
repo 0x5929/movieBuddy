@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import { mount } from '@vue/test-utils'
 import App from './App.vue'
-import HomeView from '../views/Home.vue'
+import HomePage from '../views/HomePage.vue'
 
 describe('App', () => {
   let setup
@@ -16,7 +16,7 @@ describe('App', () => {
         routes: [{
           path: '/',
           name: 'Home',
-          component: HomeView
+          component: HomePage
         }]
       })
       await router.isReady

@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/vue"
 import { createRouter, createWebHistory } from 'vue-router'
 import { describe, it, expect } from "vitest"
 
-import Home from '../Home.vue'
+import HomePage from '../HomePage.vue'
 import MovieDetail from '../MovieDetail.vue'
 
 
@@ -14,7 +14,7 @@ describe('E2E/Intergration Test', async () => {
     routes: [{
       path: '/',
       name: 'Home',
-      component: Home
+      component: HomePage
     },
     {
       path: '/movie/:id',
@@ -24,7 +24,7 @@ describe('E2E/Intergration Test', async () => {
   })
   await router.isReady
   
-  render(Home, { global: {
+  render(HomePage, { global: {
     plugins: [router]
   }})
 

@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { createRouter, createWebHistory } from 'vue-router'
 import { mount } from '@vue/test-utils'
-import Home from '../Home.vue'
+import HomePage from '../HomePage.vue'
 // import testData from './testData'
 import { nextTick } from 'vue'
 
@@ -19,11 +19,11 @@ describe('App', () => {
         routes: [{
           path: '/',
           name: 'Home',
-          component: Home
+          component: HomePage
         }]
       })
       await router.isReady
-      const wrapper = mount(Home, {global: {
+      const wrapper = mount(HomePage, {global: {
         plugins: [router]
       }})
   

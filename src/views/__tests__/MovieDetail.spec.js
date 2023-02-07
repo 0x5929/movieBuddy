@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { createRouter, createWebHistory } from 'vue-router'
 import { mount } from '@vue/test-utils'
 import MovieDetail from '../MovieDetail.vue'
-import Home from '../Home.vue'
+import HomePage from '../HomePage.vue'
 import { getResp } from './testData'
 import { nextTick } from 'vue'
 
@@ -18,7 +18,7 @@ describe('MovieDetail',  () => {
               {
                 path: '/',
                 name: 'Home',
-                component: Home
+                component: HomePage
               },
               {
                 path: '/movie/:id',
