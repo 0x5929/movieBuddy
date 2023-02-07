@@ -71,7 +71,7 @@ const onSubmit = async () => {
   </main>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 .home {
   .featured-card {
     @apply relative;

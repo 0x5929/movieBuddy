@@ -29,7 +29,7 @@ onBeforeMount(async () => {
   </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 .movie-detail {
   @apply p-4 text-white text-center;
 
